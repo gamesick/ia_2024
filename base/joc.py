@@ -15,6 +15,7 @@ from abc import ABC
 
 import pygame
 
+from aspirador.joc_gui import AccionsAspirador
 from base import agent, entorn
 
 fps_controller = pygame.time.Clock()
