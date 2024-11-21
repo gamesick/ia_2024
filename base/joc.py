@@ -46,7 +46,9 @@ class Joc:
         self.__title = title
         self.__game_finished = False
 
-        self._game_window = None
+        # self._game_window = None
+        pygame.display.set_caption(self.__title)
+        self._game_window = pygame.display.set_mode(self._mida_pantalla)
 
     def comencar(self) -> None:
         pygame.init()
@@ -64,8 +66,8 @@ class Joc:
 
     @abc.abstractmethod
     def _draw(self):
-        pygame.display.set_caption(self.__title)
-        self._game_window = pygame.display.set_mode(self._mida_pantalla)
+        pass
+
 
     @abc.abstractmethod
     def percepcio(self) -> entorn.Percepcio:
